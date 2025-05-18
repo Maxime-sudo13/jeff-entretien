@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 90%; /* #E6E6E6 */
+    --foreground: 30 36% 7%; /* #333333 */
+    
+    --card: 0 0% 100%; /* #FFFFFF */
+    --card-foreground: 30 36% 7%; /* #333333 */
+    
+    --popover: 0 0% 100%; /* #FFFFFF */
+    --popover-foreground: 30 36% 7%; /* #333333 */
+    
+    --primary: 146 78% 20%; /* #0A5D36 */
+    --primary-foreground: 0 0% 100%; /* #FFFFFF */
+    
+    --secondary: 16 61% 23%; /* #5E2C17 */
+    --secondary-foreground: 0 0% 100%; /* #FFFFFF */
+    
+    --muted: 36 35% 85%; /* #E9DCC9 */
+    --muted-foreground: 30 3% 40%; /* #666666 */
+    
+    --accent: 36 35% 85%; /* #E9DCC9 */
+    --accent-foreground: 16 61% 23%; /* #5E2C17 */
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%; /* #FFFFFF */
+    
+    --border: 36 35% 75%;
+    --input: 36 35% 75%;
+    --ring: 146 78% 20%; /* #0A5D36 */
+    
+    --radius: 0.5rem;
+  }
+ 
+  .dark {
+    --background: 30 36% 7%; /* #333333 */
+    --foreground: 0 0% 98%; /* #FAFAFA */
+    
+    --card: 30 36% 10%; /* #444444 */
+    --card-foreground: 0 0% 98%; /* #FAFAFA */
+    
+    --popover: 30 36% 10%; /* #444444 */
+    --popover-foreground: 0 0% 98%; /* #FAFAFA */
+    
+    --primary: 146 78% 20%;
+    --primary-foreground: 0 0% 100%; /* #FFFFFF */
+    
+    --secondary: 16 61% 23%;
+    --secondary-foreground: 0 0% 100%; /* #FFFFFF */
+    
+    --muted: 36 35% 25%;
+    --muted-foreground: 36 5% 65%;
+    
+    --accent: 36 35% 25%;
+    --accent-foreground: 0 0% 98%; /* #FAFAFA */
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%; /* #FAFAFA */
+    
+    --border: 36 35% 25%;
+    --input: 36 35% 25%;
+    --ring: 146 78% 20%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-[#D5C5A8];
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif text-secondary;
+  }
+  
+  p, span, div {
+    @apply font-sans;
+  }
+}
+
+/* Animations personnalisées */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.animate-slideInUp {
+  animation: slideInUp 0.5s ease-out;
+}

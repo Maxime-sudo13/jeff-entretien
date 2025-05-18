@@ -1,0 +1,8 @@
+# robots.txt pour Jeff Entretien
+
+# Permettre à tous les robots d'explorer le site
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.jeffentretien.fr/sitemap.xml
