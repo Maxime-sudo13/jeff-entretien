@@ -1,4 +1,4 @@
-import { LocalBusiness, WebSite, WithContext } from "schema-dts";
+import type { LocalBusiness, WebSite, WithContext } from "schema-dts";
 
 export function LocalBusinessJsonLd() {
   const localBusiness: WithContext<LocalBusiness> = {
